@@ -1,0 +1,160 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 10px;
+}
+
+.elenco {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.jogador {
+  width: 200px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.jogador img {
+  width: 100%;
+}
+
+#informacoes-jogador {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+#informacoes-jogador img {
+  width: 100%;
+  max-width: 200px;
+  margin-bottom: 10px;
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #777;
+}
+
+.menu a:hover {
+  background-color: #999;
+}
+
+#search-form {
+  margin-top: 20px;
+  display: flex;
+}
+
+#search-input {
+  padding: 5px;
+  border-radius: 5px 0 0 5px;
+  border: none;
+  width: 200px;
+}
+
+#search-input:focus {
+  outline: none;
+}
+
+button[type="submit"] {
+  border-radius: 0 5px 5px 0;
+  background-color: #777;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #999;
+}
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Estilos para o calendário de jogos */
+
+#calendario {
+  margin: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+caption {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+
+thead {
+  background-color: #f2f2f2;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+
+
+@media (max-width: 768px) {
+  .coluna {
+    width: 50%;
+  }
+}
+
+
+@media (max-width: 1024px) {
+  .coluna {
+    width: 25%;
+  }
+}
+
+
+@media (min-width: 1024px) {
+  .coluna {
+    width: 16.66%;
+  }
+}
+
+
+@media (max-width: 1200px) {
+  .lista {
+    max-width: 1200px;
+  }
+}

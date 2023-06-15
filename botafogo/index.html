@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elenco de Futebol</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Botafogo</h1>
+    <nav>
+      <ul class="menu"> 
+        <li><a href="#elenco-feminino">Elenco Feminino</a></li>
+        <li><a href="#elenco-masculino">Elenco Masculino</a></li>
+        <li><a href="calendario.html">Calendário de Jogos</a></li>
+        <li><a href="noticias.html">Notícias</a></li>
+      </ul>
+    </nav>
+    <form id="search-form" onsubmit="return buscarJogador()">
+      <input type="text" id="search-input" placeholder="Buscar jogador...">
+      <button type="submit">Buscar</button>
+    </form>
+  </header>
+
+  <h1>Elenco Profissional</h1>
+
+  <h2>Elenco Feminino</h2>
+  <div id="elenco-feminino" class="elenco">
+    <!-- Início do loop dos jogadores do elenco feminino -->
+    <!-- Cada jogador será representado por um elemento div com a classe "jogador" -->
+  </div>
+
+  <h2>Elenco Masculino</h2>
+  <div id="elenco-masculino" class="elenco">
+    <!-- Início do loop dos jogadores do elenco masculino -->
+    <!-- Cada jogador será representado por um elemento div com a classe "jogador" -->
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    // Array de jogadores do elenco feminino
+    var elencoFeminino = [
+      {
+      nome: "Mari Zanella",
+      imagem: "https://botafogo.com.br/images/futebol-feminino/perfil/mari-zanella.png"
+      },
+      {
+      nome: "Ingrid Sabino",
+      imagem: "https://botafogo.com.br/images/futebol-feminino/perfil/ingrid-sabino.png"
+      },
+      {
+      nome: "YASMIM",
+      imagem: "https://botafogo.com.br/images/futebol-feminino/perfil/yasmin.png"
+      },
+      {
+      nome: "KELLY",
+      imagem: "https://botafogo.com.br/images/futebol-feminino/perfil/chiavaro.png"
+      },
+      {
+      nome: "BRUNA SOUZA",
+      imagem: "https://botafogo.com.br/images/futebol-feminino/perfil/bruna.png"
+      },
+      {
+      nome: "LUANA",
+      imagem: "https://botafogo.com.br/images/futebol-feminino/perfil/luana.png"
+      },
+      {
+      nome: "JÉSSICA BAHIA",
+      imagem: "https://botafogo.com.br/images/futebol-feminino/perfil/jessica-bahia.png"
+      },
+      {
+      nome: "CHAI",
+      imagem: "https://botafogo.com.br/images/futebol-feminino/perfil/chai.png"
+      },
+      {
+      nome: "SANDRA",
+      imagem: "https://botafogo.com.br/images/futebol-feminino/perfil/sandra.png"
+      },
+      {
+      nome: "KÁREN",
+      imagem: "https://botafogo.com.br/images/futebol-feminino/perfil/karen.png"
+      },
+      {
+      nome: "THAMIRES",
+      imagem: "https://botafogo.com.br/images/futebol-feminino/perfil/thamires.png"
+      },
+      {
+      nome: "JANA QUEIROZ",
+      imagem: "https://botafogo.com.br/images/futebol-feminino/perfil/jana-queiroz.png"
+      },
+      {
+      nome: "NALON",
+      imagem: "https://botafogo.com.br/images/futebol-feminino/perfil/nalon.png"
+      },
+      {
+      nome: "JU SANTOS",
+      imagem: "https://botafogo.com.br/images/futebol-feminino/perfil/ju-santos.png"
+      },
+      {
+      nome: "TREYCI",
+      imagem: "https://botafogo.com.br/images/futebol-feminino/perfil/treyci.png"
+      },
+      {
+      nome: "Japa",
+      imagem: "https://botafogo.com.br/images/futebol-feminino/perfil/japa.png"
+      },
+      {
+      nome: "DRIELY",
+      imagem: "https://botafogo.com.br/images/futebol-feminino/perfil/driely.png"
+      },
+      {
+      nome: "CAMILA OLIVEIRA",
+      imagem: "https://botafogo.com.br/images/futebol-feminino/perfil/camila.png"
+      },
+      {
+      nome: "VITORINHA",
+      imagem: "https://botafogo.com.br/images/futebol-feminino/perfil/vitorinha.png"
+      },
+      {
+        nome: "MAYARA VAZ",
+        imagem: "https://botafogo.com.br/images/futebol-feminino/perfil/mayara-vaz.png"
+      },
+      {
+        nome: "ELISA",
+        imagem: "https://botafogo.com.br/images/futebol-feminino/perfil/elisa.png"
+      },
+      {
+        nome: "VÂNIA",
+        imagem: "https://botafogo.com.br/images/futebol-feminino/perfil/vania.png"
+      },
+      {
+        nome: "KÉLEN",
+        imagem: "https://botafogo.com.br/images/futebol-feminino/perfil/kelen.png"
+      },
+      {
+        nome: "MAISA",
+        imagem: "https://botafogo.com.br/images/futebol-feminino/perfil/maisa.png"
+      },
+      {
+        nome: "KAMILLA",
+        imagem: "https://botafogo.com.br/images/futebol-feminino/perfil/kamilla.png"
+      },
+      {
+        nome: "LARISSA NASCIMENTO",
+        imagem: "https://botafogo.com.br/images/futebol-feminino/perfil/larissa-nascimento.png"
+      },
+      {
+        nome: "THAYNARA",
+        imagem: "https://botafogo.com.br/images/futebol-feminino/perfil/thaynara.png"
+      },
+      {
+        nome: "VALÉRIA",
+        imagem: "https://botafogo.com.br/images/futebol-feminino/perfil/valeria.png"
+      },
+      {
+        nome: "DRIKA",
+        imagem: "https://botafogo.com.br/images/futebol-feminino/perfil/drika.png"
+      }
+      ];
+
+    // Array de jogadores do elenco masculino
+    var elencoMasculino = [
+      {
+        nome: "Gatito Fernández",
+        imagem: "https://botafogo.com.br/images/elenco2023/roleta/gatito.png"
+      },
+      {
+        nome: "Douglas Borges",
+        imagem: "https://botafogo.com.br/images/elenco2023/roleta/douglas.png"
+      },
+      {
+        nome: "Igo Gabriel",
+        imagem: "https://botafogo.com.br/images/elenco2023/roleta/igo-gabriel.png"
+      },
+      {
+        nome: "Lucas Perri",
+        imagem: "https://botafogo.com.br/images/elenco2023/roleta/lucasperri.png"
+      },
+      {
+        nome: "João Fernando",
+        imagem: "https://botafogo.com.br/images/elenco2023/roleta/joaofernando.png"
+      },
+      {
+        nome: "Hugo",
+        imagem: "https://botafogo.com.br/images/elenco2023/roleta/hugo.png"
+      },
+      {
+        nome: "Rafael",
+        imagem: "https://botafogo.com.br/images/elenco2023/roleta/rafael-pereira.png"
+      },
+      {
+        nome: "Daniel Borges",
+        imagem: "https://botafogo.com.br/images/elenco2023/roleta/daniel-borges.png"
+      },
+      {
+        nome: "Marçal",
+        imagem: "https://botafogo.com.br/images/elenco2023/roleta/marcal.png"
+      },
+      {
+        nome: "Di Plácido",
+        imagem: "https://botafogo.com.br/images/elenco2023/roleta/diplacido.png"
+      },
+      {
+        nome: "Joel Carli",
+        imagem: "https://botafogo.com.br/images/elenco2023/roleta/joelcarli.png"
+      },
+      {
+        nome: "Philipe Sampaio",
+        imagem: "https://botafogo.com.br/images/elenco2023/roleta/philipe-sampaio.png"
+      },
+      {
+        nome: "Victor Cuesta",
+        imagem: "https://botafogo.com.br/images/elenco2023/roleta/cuesta.png"
+      },
+      {
+        nome: "Adryelson",
+        imagem: "https://botafogo.com.br/images/elenco2023/roleta/adryelson.png"
+      },
+      {
+        nome: "Segovia",
+        imagem: "https://botafogo.com.br/images/elenco2023/roleta/segovia.png"
+      },
+      {
+        nome: "Lucas Mezenga",
+        imagem: "https://botafogo.com.br/images/elenco2023/roleta/mezenga.png"
+      },
+      {
+        nome: "Kayque",
+        imagem: "https://botafogo.com.br/images/elenco2023/roleta/kayque.png"
+      },
+      {
+        nome: "Tchê Tchê",
+        imagem: "https://botafogo.com.br/images/elenco2023/roleta/tchetche.png"
+      },
+      {
+        nome: "Danilo Barbosa",
+        imagem: "https://botafogo.com.br/images/elenco2023/roleta/danilobarbosa.png"
+      },
+      {
+        nome: "Patrick de Paula",
+        imagem: "https://botafogo.com.br/images/elenco2023/roleta/patrick-paula.png"
+      },
+      {
+        nome: "Marlon Freitas",
+        imagem: "https://botafogo.com.br/images/elenco2023/roleta/marlon.png"
+      },
+      {
+        nome: "Breno",
+        imagem: "https://botafogo.com.br/images/elenco2023/roleta/breno.png"
+      },
+      {
+        nome: "JP",
+        imagem: "https://botafogo.com.br/images/elenco2023/roleta/jp.png"
+      },
+      {
+        nome: "Lucas Piazon",
+        imagem: "https://botafogo.com.br/images/elenco2023/roleta/lucas-piazon.png"
+      },
+      {
+        nome: "Lucas Fernandes",
+        imagem: "https://botafogo.com.br/images/elenco2023/roleta/lucas-fernandes.png"
+      },
+      {
+        nome: "Eduardo",
+        imagem: "https://botafogo.com.br/images/elenco2023/roleta/eduardo.png"
+      },
+      {
+        nome: "Gabriel Pires",
+        imagem: "https://botafogo.com.br/images/elenco2023/roleta/gabrielpires.png"
+      },
+      {
+        nome: "Jacob Montes",
+        imagem: "https://botafogo.com.br/images/elenco2023/roleta/jacobmontes.png"
+      },
+      {
+        nome: "Raí",
+        imagem: "https://botafogo.com.br/images/elenco2023/roleta/rai.png"
+      },
+      {
+        nome: "Bernardo Valim",
+        imagem: "https://botafogo.com.br/images/elenco2023/roleta/valim.png"
+      },
+      {
+        nome: "Gustavo Sauer",
+        imagem: "https://botafogo.com.br/images/elenco2023/roleta/gustavo-sauer.png"
+      },
+      {
+        nome: "Luis Henrique",
+        imagem: "https://botafogo.com.br/images/elenco2023/roleta/luishenrique.png"
+      },
+      {
+        nome: "Victor Sá",
+        imagem: "https://botafogo.com.br/images/elenco2023/roleta/victor-sa.png"
+      },
+      {
+        nome: "Matheus Nascimento",
+        imagem: "https://botafogo.com.br/images/elenco2023/roleta/matheus-nascimento.png"
+      },
+      {
+        nome: "Tiquinho Soares",
+        imagem: "https://botafogo.com.br/images/elenco2023/roleta/tiquinho.png"
+      },
+      {
+        nome: "Carlos Alberto",
+        imagem: "https://botafogo.com.br/images/elenco2023/roleta/carlosalberto.png"
+      },
+      {
+        nome: "Janderson",
+        imagem: "https://botafogo.com.br/images/elenco2023/roleta/janderson.png"
+      },
+      {
+        nome: "Junior Santos",
+        imagem: "https://botafogo.com.br/images/elenco2023/roleta/juniorsantos.png"
+      },
+      {
+        nome: "Matías Segovia",
+        imagem: "https://botafogo.com.br/images/elenco2023/roleta/matias-segovia.png"
+      },
+      {
+        nome: "Diego Hernández",
+        imagem: "https://botafogo.com.br/images/elenco2023/roleta/diego-hernandez.png"
+      }
+      ];
+
+    // Função para criar o elemento jogador
+    function criarElementoJogador(jogador, elencoElement) {
+      var jogadorElement = document.createElement("div");
+      jogadorElement.classList.add("jogador");
+      jogadorElement.onclick = function() {
+        mostrarInformacoes(jogador);
+      };
+
+      var imgElement = document.createElement("img");
+      imgElement.src = jogador.imagem;
+      imgElement.alt = "Foto do jogador(a)";
+
+      var nomeElement = document.createElement("p");
+      nomeElement.textContent = jogador.nome;
+
+      jogadorElement.appendChild(imgElement);
+      jogadorElement.appendChild(nomeElement);
+
+      elencoElement.appendChild(jogadorElement);
+    }
+
+    // Função para exibir as informações do jogador selecionado
+    function mostrarInformacoes(jogador) {
+      var url = "informacoes.html?jogador=" + jogador.nome;
+      window.location.href = url;
+    }
+
+    // Função para exibir os jogadores do elenco
+    function exibirElenco(elenco, elencoElement) {
+      elencoElement.innerHTML = "";
+      for (var i = 0; i < elenco.length; i++) {
+        criarElementoJogador(elenco[i], elencoElement);
+      }
+    }
+
+    // Exibir o elenco feminino e masculino na página inicial
+    var elencoFemininoElement = document.getElementById("elenco-feminino");
+    var elencoMasculinoElement = document.getElementById("elenco-masculino");
+
+    exibirElenco(elencoFeminino, elencoFemininoElement);
+    exibirElenco(elencoMasculino, elencoMasculinoElement);
+
+    // Função para buscar um jogador pelo nome
+    function buscarJogador() {
+      var searchInput = document.getElementById("search-input");
+      var jogadorNome = searchInput.value;
+
+      for (var i = 0; i < elencoFeminino.length; i++) {
+        if (elencoFeminino[i].nome.toLowerCase() === jogadorNome.toLowerCase()) {
+          mostrarInformacoes(elencoFeminino[i]);
+          searchInput.value = "";
+          return false;
+        }
+      }
+
+      for (var i = 0; i < elencoMasculino.length; i++) {
+        if (elencoMasculino[i].nome.toLowerCase() === jogadorNome.toLowerCase()) {
+          mostrarInformacoes(elencoMasculino[i]);
+          searchInput.value = "";
+          return false;
+        }
+      }
+
+      alert("Jogador não encontrado!");
+      searchInput.value = "";
+      return false;
+    }
+  </script>
+    <footer>
+      <p>Desenvolvimento Web - Carolina Cruz dos Santos</p>
+    </footer>
+</body>
+</html>
