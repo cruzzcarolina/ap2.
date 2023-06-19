@@ -1,0 +1,108 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .menu a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #777;
+}
+  
+.menu a:hover {
+    background-color: #999;
+}
+  
+nav ul {
+    list-style: none;
+    display: flex;
+}
+  
+nav ul li {
+    margin-left: 10px;
+}
+
+  
+  #calendario {
+    margin: 50px auto;
+    max-width: 700px;
+    padding: 0 20px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+  }
+  
+  caption {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  #elenco_feminino,
+#elenco_masculino {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .jogador {
+    width: 50%;
+    padding: 10px;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .jogador {
+    width: 25%;
+    padding: 10px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .jogador {
+    width: 16.666%;
+    padding: 10px;
+  }
+}
+@media screen and (max-width: 768px) {
+  #detalhes_jogador {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #detalhes_jogador img {
+    margin-bottom: 20px;
+  }
+
+  #info_jogador {
+    text-align: center;
+  }
+}

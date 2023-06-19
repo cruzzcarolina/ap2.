@@ -1,0 +1,222 @@
+body {
+  background-color: white;
+  color: black;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #777;
+}
+
+.menu a:hover {
+  background-color: #999;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 10px;
+}
+
+h1 {
+  color: #fff;
+}
+
+h2 {
+  margin-top: 30px;
+}
+
+.jogador {
+  display: inline-block;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.jogador img {
+  width: 100%;
+  height: auto;
+}
+
+.jogador p {
+  text-align: center;
+  margin-top: 5px;
+}
+
+#detalhes_jogador {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+#detalhes_jogador img {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  object-fit: cover;
+}
+
+#detalhes_jogador .info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  #detalhes_jogador {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  #detalhes_jogador img {
+    width: 200px;
+    height: auto;
+    margin-bottom: 0;
+  }
+
+  #detalhes_jogador .info-container {
+    align-items: flex-start;
+    margin-left: 20px;
+  }
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+.label {
+  font-weight: bold;
+}
+
+.valor {
+  margin-left: 5px;
+}
+
+/* Estilos para a página inicial (index.html) */
+#elenco_feminino,
+#elenco_masculino {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.jogador {
+  width: calc(100% / 6);
+  padding: 10px;
+}
+
+.titulo-noticias {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.noticias-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.noticia-link {
+  text-decoration: none;
+  color: #333;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.noticia-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.noticia-image {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.descricao-noticia {
+  max-width: 700px;
+  font-size: 14px;
+  text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+  #elenco_feminino,
+  #elenco_masculino {
+    justify-content: space-between;
+  }
+
+  .jogador {
+    width: calc(100% / 2);
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #elenco_feminino,
+  #elenco_masculino {
+    justify-content: space-between;
+  }
+
+  .jogador {
+    width: calc(100% / 4);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #elenco_feminino,
+  #elenco_masculino {
+    justify-content: space-between;
+  }
+
+  .jogador {
+    width: calc(100% / 6);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #elenco_feminino,
+  #elenco_masculino {
+    justify-content: space-between;
+    max-width: 1200px;
+  }
+}
